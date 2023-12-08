@@ -5,22 +5,73 @@
         <li><a href="McDonalds.html">McDonalds</a></li>
         <li><a href="ChickFilA.html">Chick-Fil-A</a></li>
         <li style="float:right"><a class="active" href="about.html">About</a></li>
+        <li style="float:right"><a class="active" href="index.html">Home</a></li>
     </ul>
-<head>
-<div style = text-align:center>
-<img src="KFC2.jpeg" alt="HTML5 Icon" width="280" height="200">
-<img src="KFC3.jpeg" alt="HTML5 Icon" width="260" height="200">
-<img src="KFC.png" alt="HTML5 Icon" width="500" height="200">
-<img src="KFC4.jpeg" alt="HTML5 Icon" width="250" height="200">
-<img src="KFC6.png" alt="HTML5 Icon" width="180" height="200">
-<hr>
-<h2>Choose your allergens and find out what KFC Items you can eat! </h2>
-</div>
-</head>
-<style>
+    <body>
+        <p id = "showMe"> Start by choosing a restaurant! </p>
+        <p id = "head"> Welcome to</p>
+        <img id = "thrive" src="8majorfod.jpeg" alt="HTML5 Icon" width="220" height="300">
+        <p id = "head2"> Thriving with Food Allergies</p>
+        <img id = "thrive" src="cautionallergens.jpeg" alt="HTML5 Icon" width="220" height="300">
+        <p id = "info">Restaurants we provide info for (images are clickable!):</p>
+        <div style = text-align:center>
+        <a href="KFC.html"><img id = "provide" src="KFC1.png" alt="HTML5 Icon" width="220" height="180"></a>
+        <a href="McDonalds.html"><img id = "provide" src="mcd1.png" alt="HTML5 Icon" width="250" height="180"></a>
+        <a href="ChickFilA.html"><img id = "provide" src="cfa1.png" alt="HTML5 Icon" width="300" height="180"></a>
+        </div>
+    </body>
+    <div id="footer"> &copy 2023 Amlan Mahapatra </div>
+    <style>
 body{
     background-color:#ADD8E6;
     margin:0;
+}
+#showMe {
+  animation: cssAnimation 0s 4s forwards;
+  visibility: hidden;
+  margin: top 5px;
+  margin-left:1%;
+  margin-bottom:0;
+    font-weight:bold;
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display:inline-block;
+}
+
+@keyframes cssAnimation {
+  to   { visibility: visible; }
+}
+#thrive{
+    display:inline-block;
+    width:24%;
+}
+#provide{
+    display:inline-block;
+}
+#info{
+    text-align:center;
+    font-weight:bold;
+    font-size:20px;
+    margin-top:1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#head{
+    text-align:center;
+    font-weight:bold;
+    font-size:100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top:0;
+    margin-bottom:10px;
+}
+#head2{
+    text-align:center;
+    font-weight:bold;
+    font-size:160px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top:10px;
+    margin-bottom:10px;
+    display:inline-block;
+    width:50%;
 }
 #footer {
     position: fixed;
@@ -31,27 +82,6 @@ body{
     color: #fff;
     padding: 10px;
     text-align: center;
-}
-hr{
-    border: 1px solid black;
-}
-img{
-    margin: 10px;
-    float:center;
-}
-h1{
-    text-align:center;
-    text-decoration:underline;
-    font-size:30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-bottom:0;
-
-}
-h2{
-    text-align:center;
-    font-size:40px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 ul {
   list-style-type: none;
@@ -64,32 +94,8 @@ ul {
 li {
   float: left;
 }
-#firstItem{
-    text-align:center;
-    font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-#treenut{
-    text-align:center;
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-#allergens{
-    text-align:center;
-    font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-top:5px;
-}
-#safety{
-    text-align:center;
-    font-size: 60px;
-    text-decoration: underline;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin:20px;
-}
-#mainbutton{
-    text-align:center;
-    font-size:50px;
+li a:hover {
+  background-color: #111;
 }
 li a {
   display: block;
@@ -98,168 +104,5 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-button{
-    border-radius:6px;
-    font-size:20px;
-    padding:5px;
-    margin:1px;
-}
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
-</style>
-<body>
-   <script>
-    var allergens = new Array(8);
-    var RoastedCaesarSaladwoDressingCroutons = ["Roasted Caesar Salad w/o Dressing & Croutons", "milk", "wheat", "soy"];
-    var CrispyCaesarSaladwoDressing = ["Crispy Caesar Salad w/o Dressing", "milk", "wheat", "soy"];
-    var RoastedBLTSaladwoDressing = ["Roasted BLT Salad w/o Dressing", "milk", "wheat", "soy"];
-    var CrispyBLTSaladwoDressing = ["Crispy BLT Salad w/o Dressing", "wheat", "soy"];
-    var HouseSaladwoDressing = ["House Salad w/o Dressing"];
-    var HiddenValleyTheOriginalRanchDressing = ["Hidden Valley The Original Ranch Dressing", "milk", "eggs"];
-    var HiddenValleyTheOriginalFatFreeRanchDressing = ["Hidden Valley The Original Fat Free Ranch Dressing", "milk", "eggs"];
-    var HiddenValleyGoldenItalianLightDressing = ["Hidden Valley Golden Italian Light Dressing", "soy"];
-    var KFCCreamyParmesanCaesarDressing = ["KFC Creamy Parmesan Caesar Dressing", "milk", "eggs", "fish", "soy"];
-    var KFCParmesanGarlicCroutonsPouch = ["KFC Parmesan Garlic Croutons Pouch", "milk", "wheat"];
-    var KFCFamousBowlsMashedPotatowithGravy = ["KFC Famous Bowls-Rice with Gravy", "milk", "wheat", "soy"];
-    var KFCFamousBowlsRicewithGravy = ["KFC Famous Bowls-Rice with Gravy", "wheat", "soy", "milk"];
-    var KFCSnacker = ["KFC Snacker", "wheat", "eggs", "soy", "milk"];
-    var KFCBuffaloSnacker = ["KFC Buffalo Snacker", "milk", "eggs", "wheat", "soy"];
-    var KFCFishSnacker = ["KFC Fish Snacker", "milk", "eggs", "fish", "egg"];
-    var HoneyBBQKFCSnacker = ["Honey BBQ KFC Snacker", "milk", "eggs", "wheat", "soy"];
-    var HoneyBBQSandwich = ["Honey BBQ Sandwich", "milk", "soy", "wheat", "eggs"];
-    var TripleCrunchSandwich = ["Triple Crunch Sandwich", "milk", "eggs", "wheat", "soy"];
-    var DoubleCrunchSandwich = ["Double Crunch Sandwich", "milk", "eggs", "wheat", "soy"];
-    var CrispyTwister = ["Crispy Twister", "milk", "eggs", "wheat", "soy"];
-    var OvenRoastedTwister = ["Oven Roasted Twister", "milk", "eggs", "wheat", "soy"];
-    var TenderRoastSandwich = ["Tender Roast Sandwich", "milk", "eggs", "wheat", "soy"];
-    var TenderRoastSandwichwoSauce = ["Tender Roast Sandwich w/o Sauce", "milk", "wheat", "soy"];
-    var OriginalRecipeChicken = ["Original Recipe Chicken", "milk", "eggs", "wheat", "soy"];
-    var ExtraCrispyChicken = ["Extra Crispy Chicken", "wheat", "soy"];
-    var ColonelsCrispyStrips = ["Colonels Crispy Strips", "milk", "eggs", "wheat", "soy"];
-    var PopcornChicken = ["Popcorn Chicken", "milk", "soy", "wheat", "eggs"];
-    var ChickenPotPie = ["Chicken Pot Pie", "milk", "eggs", "wheat", "soy"];
-    var HBBQWings = ["HBBQ Wings", "wheat", "soy"];
-    var BonelessHBBQWings = ["Boneless HBBQ Wings", "milk", "eggs", "wheat", "soy"];
-    var FieryBuffaloWings = ["Fiery Buffalo Wings", "milk", "wheat", "soy"];
-    var BonelessFieryBuffaloWings = ["Boneless Fiery Buffalo Wings", "milk", "eggs", "wheat", "soy"];
-    var SweetandSpicyWings = ["Sweet and Spicy Wings", "wheat", "soy"];
-    var SweetandSpicyBonelessWings = ["Sweet and Spicy Boneless Wings", "milk", "eggs", "wheat", "soy"];
-    var HotWings = ["Hot Wings", "wheat"];
-    var Biscuit = ["Biscuit", "milk", "soy", "wheat"];
-    var GreenBeans = ["Green Beans"];
-    var SeasonedRice = ["Seasoned Rice", "milk", "soy"];
-    var MashedPotatoeswoGravy = ["Mashed Potatoes w/o Gravy", "milk", "wheat"];
-    var MashedPotatoeswGravy = ["Mashed Potatoes w/ Gravy", "milk", "wheat", "soy"];
-    var MacandCheese = ["Mac and Cheese", "milk", "eggs", "wheat", "soy"];
-    var PotatoWedges = ["Potato Wedges", "wheat"];
-    var BBQBakedBeans = ["BBQ Baked Beans", "milk", "soy", "wheat"];
-    var PotatoSalad = ["Potato Salad", "eggs"];
-    var ColeSlaw = ["Cole Slaw", "eggs"];
-    var BakedCheetos = ["Baked Cheetos", "milk"];
-    var QuakerChewySmoresGranolaBar = ["Quaker Chewy S’mores Granola Bar", "milk", "wheat", "soy", "peanuts"];
-    var ApplePieMinis = ["Apple Pie Minis", "milk", "wheat", "soy"];
-    var DoubleChocolateChipCake = ["Double Chocolate Chip Cake", "milk", "wheat", "soy"];
-    var LilBucketFudgeBrownie = ["Lil Bucket Fudge Brownie", "milk", "eggs", "wheat", "soy"];
-    var LilBucketLemonCreme = ["Lil Bucket Lemon Creme", "milk", "wheat", "soy"];
-    var LilBucketChocolateCreme = ["Lil Bucket Chocolate Creme", "milk", "wheat", "soy"];
-    var LilBucketStrawberryShortCake = ["Lil Bucket Strawberry Short Cake", "milk", "eggs", "wheat", "soy"];
-    var PecanPieSlice = ["Pecan Pie Slice", "wheat", "soy", null, null, null, null, null, null, "pecan"];
-    var ApplePieSlice = ["Apple Pie Slice", "wheat", "soy", null, null, null, null, null, null, "pecan", "almond", "cashew"];
-    var LemonMeringuePieSlice = ["Lemon Meringue Pie Slice", "eggs", "wheat", "soy"];
-    var SweetPotatoPieSlice = ["Sweet Potato Pie Slice", "wheat", "soy"];
-    var KFClist = [RoastedCaesarSaladwoDressingCroutons, CrispyCaesarSaladwoDressing, RoastedBLTSaladwoDressing, CrispyBLTSaladwoDressing, HouseSaladwoDressing, HiddenValleyTheOriginalRanchDressing, HiddenValleyTheOriginalFatFreeRanchDressing, HiddenValleyGoldenItalianLightDressing, KFCCreamyParmesanCaesarDressing, KFCParmesanGarlicCroutonsPouch, KFCFamousBowlsMashedPotatowithGravy, KFCFamousBowlsRicewithGravy, KFCSnacker, KFCBuffaloSnacker, KFCFishSnacker, HoneyBBQKFCSnacker, HoneyBBQSandwich, TripleCrunchSandwich, DoubleCrunchSandwich, CrispyTwister, OvenRoastedTwister, TenderRoastSandwich, TenderRoastSandwichwoSauce, OriginalRecipeChicken, ExtraCrispyChicken, ColonelsCrispyStrips, PopcornChicken, ChickenPotPie, HBBQWings, BonelessHBBQWings, FieryBuffaloWings, BonelessFieryBuffaloWings, SweetandSpicyWings, SweetandSpicyBonelessWings, HotWings, Biscuit, GreenBeans, SeasonedRice, MashedPotatoeswoGravy, MashedPotatoeswGravy, MacandCheese, PotatoWedges, BBQBakedBeans, PotatoSalad, ColeSlaw, BakedCheetos, QuakerChewySmoresGranolaBar, ApplePieMinis, DoubleChocolateChipCake, LilBucketFudgeBrownie, LilBucketLemonCreme, LilBucketChocolateCreme, LilBucketStrawberryShortCake, PecanPieSlice, ApplePieSlice, LemonMeringuePieSlice, SweetPotatoPieSlice];
-
-    var treeNuts = false;
-    var treeNuts_ = "";
-
-    function addMilk() { allergens[0] = "milk"; document.getElementById("allergens").innerHTML += allergens[0] + "<br>";}
-    function addEggs() { allergens[1] = "eggs"; document.getElementById("allergens").innerHTML += allergens[1] + "<br>";}
-    function addPeanuts() { allergens[2] = "peanuts"; document.getElementById("allergens").innerHTML += allergens[2] + "<br>";}
-    function addTreeNuts() { allergens[3] = "tree nuts"; treeNuts = true; document.getElementById("allergens").innerHTML += allergens[3] + "<br>"; document.getElementById("treenut").innerHTML += "Note: Tree nut items have a (TREE NUT ITEM) indicator and display contained nuts";}
-    function addFish() { allergens[4] = "fish"; document.getElementById("allergens").innerHTML += allergens[4] + "<br>";}
-    function addShellfish() { allergens[5] = "shellfish"; document.getElementById("allergens").innerHTML += allergens[5] + "<br>";}
-    function addSoy() { allergens[6] = "soy"; document.getElementById("allergens").innerHTML += allergens[6] + "<br>";}
-    function addWheat() { allergens[7] = "wheat"; document.getElementById("allergens").innerHTML += allergens[7] + "<br>";}
-    
-    function findSafeFoods() {
-        let outputElement = document.getElementById("firstItem");
-        outputElement.innerHTML = outputElement.innerHTML.slice(0, -2);
-        let allergenCounter = 0;
-        let allergenCounterTotal = 0;
-        document.getElementById("safety").innerHTML += "YOU ARE SAFE TO EAT THE FOLLOWING FOOD ITEMS";
-        for (let h = 0; h < KFClist.length; h++) {
-            for (let i = 0; i < allergens.length && allergens[i] != null; i++) {
-                for (let j = 1; j < KFClist[h].length; j++) {
-                    if (allergens[i] != null && allergens[i] === KFClist[h][j]) {
-                        allergenCounter += 1;
-                        allergenCounterTotal += 1;
-                    }
-                }
-                if (allergenCounter == 0) {
-                    //console.log("There is no " + allergens[i] + " in a " + KFClist[h][0] + ".");
-                } else if (allergenCounter == 1) {
-                    //console.log("There is " + allergens[i] + " in a " + KFClist[h][0] + ".");
-                }
-                allergenCounter = 0;
-            }
-            if (allergenCounterTotal === 0) {
-                document.getElementById("firstItem").innerHTML += " " + KFClist[h][0] + "<br>";
-                allergenCounterTotal = 0;
-            }
-            for (let i = 9; i < KFClist[h].length; i++) {
-                treeNuts_ += KFClist[h][i] + ", ";
-            }
-            treeNuts_ = treeNuts_.slice(0, -2);
-            if (KFClist[h].length > 10) {
-                for (let n = 0; n < KFClist[h][KFClist[h].length - 1].length; n++) {
-                    treeNuts_ = treeNuts_.slice(0,-1);
-                }
-                treeNuts_ += "and ";
-                treeNuts_ += KFClist[h][KFClist[h].length - 1];
-            }
-            if (treeNuts === true && allergenCounterTotal === 0 && (KFClist[h] === ApplePieSlice || KFClist[h] === PecanPieSlice)) {
-                let treeNutItemLength = KFClist[h][0].length;
-                console.log(treeNutItemLength);
-                let outputElement2 = document.getElementById("firstItem");
-                outputElement2.innerHTML = outputElement.innerHTML.slice(0, -treeNutItemLength);
-                outputElement2.innerHTML = outputElement.innerHTML.slice(0, -4);
-                document.getElementById("firstItem").innerHTML += "(TREE NUT ITEM) " + KFClist[h][0] + " contains these tree nuts: " + treeNuts_ + "<br>";
-            }
-            treeNuts_ = "";
-            allergenCounterTotal = 0;
-        }
-    }
-    function disappear(){
-         // Get the button element by its ID
-        var button = document.getElementById('mainbutton');
-        // Remove the button from the DOM
-        button.remove();
-    }
-    function findSafeFoodsAndDissappear(){
-        findSafeFoods();
-        disappear();
-    }
-
-   </script>
-   <div style = text-align:center>
-   <button onclick = "addMilk()"> Milk/Dairy </button>
-   <button onclick = "addEggs()"> Eggs </button>
-   <button onclick = "addPeanuts()"> Peanuts </button>
-   <button onclick = "addTreeNuts()"> Tree Nuts </button>
-   <button onclick = "addFish()"> Fish </button>
-   <button onclick = "addShellfish()"> Shellfish/Crustaceans </button>
-   <button onclick = "addSoy()"> Soy </button>
-   <button onclick = "addWheat()"> Wheat/Gluten </button>
-   </div>
-   <h1> Your allergens</h1>
-   <p id = "allergens"> </p>
-   <p id = "treenut"> </p>
-   <p id = "safety"> </p>
-   <p id = "firstItem"> </p>
-   <div style = text-align:center> <button id = "mainbutton" onclick = "findSafeFoodsAndDissappear()"> <center>Find food items!</center> </button></div>
-   <div id="footer"> &copy 2023 Amlan Mahapatra </div>
-   <br><br>
-</body> 
+    </style>
 </html>

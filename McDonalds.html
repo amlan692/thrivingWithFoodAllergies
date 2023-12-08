@@ -5,6 +5,7 @@
         <li><a href="McDonalds.html">McDonalds</a></li>
         <li><a href="ChickFilA.html">Chick-Fil-A</a></li>
         <li style="float:right"><a class="active" href="about.html">About</a></li>
+        <li style="float:right"><a class="active" href="index.html">Home</a></li>
     </ul>
 <head>
 <div style = text-align:center>
@@ -21,6 +22,12 @@
 body{
     background-color:#ADD8E6;
     margin:0;
+}
+#finish{
+    text-align:center;
+    font-weight:bold;
+    font-size:40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #footer {
     position: fixed;
@@ -100,7 +107,7 @@ li a {
 }
 button{
     border-radius:6px;
-    font-size:20px;
+    font-size:40px;
     padding:5px;
     margin:1px;
 }
@@ -230,6 +237,7 @@ li a:hover {
             treeNuts_ = "";
             allergenCounterTotal = 0;
         }
+        document.getElementById("finish").innerHTML += "Reload to enter allergens again!";
     }
     function disappear(){
          // Get the button element by its ID
@@ -258,6 +266,7 @@ li a:hover {
    <p id = "treenut"> </p>
    <p id = "safety"> </p>
    <p id = "firstItem"> </p>
+   <p id = "finish"> </p>
    <div style = text-align:center> <button id = "mainbutton" onclick = "findSafeFoodsAndDissappear()"> <center>Find food items!</center> </button></div>
    <br><br>
 </body> 
